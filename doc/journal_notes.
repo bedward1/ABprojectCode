@@ -1,0 +1,37 @@
+August 2
+received new data files from Meng. These have the Spu* annotations instead of the mix that they were before.
+Redo code to import these. Files are names 'data_spu*'
+
+get different annotation file. "ShewW3181_annots_042513.csv" from xls file
+
+at finishing,
+all looks good for now
+some outputs:
+> cor(Lactate_CC , Shew_HL_HO2)[1] 0.9693649> cor(Lactate_CC,C_lim_CC)[1] 0.3958515> cor(Shew_HL_HO2,C_lim_CC)[1] 0.40397
+
+don't know whether he would expect this.
+do some qa before sending it to him on monday 
+
+scatter plot done in ggplot2, will work on putting this in code next time
+-----------------------------
+Aug 5, 2013
+Checked above correlations with raw .xls file. Match up. Corrleations very close which means that the normazlaition is very close.
+
+Add fold change calculations to output for alex and check that annotations are correctly matched. 
+
+do fold change calc. then add annotations. need to make any zero value to .1
+
+finished all. 
+Summary
+final R output is put in "output" folder. This will require some polishing.
+polishing: get rid of data with no IDs
+show less decimals
+color code sections
+add cover sheet
+add spaces and justifications to make pretty
+(fixed the way the data was divided a couple of places in fold.chage.R code)
+_______________________
+
+wrote some code to filter based on total counts (to get rid of low count genes) and also to see only genes that are regulated 2 fold or more (+/-) in at least 1 comparison.
+so far this is just an add on to already outputted data, but could put it in workflow easily.
+is called 'filter.R'

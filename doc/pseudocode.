@@ -1,0 +1,6 @@
+8/1/13
+1.import data-csv files , one for each condition
+2. combine, add col labels, put gene ids for row name (munge/parse1)
+3. normalize with DE-Seq package(norm)
+4. add annotiations using a match/bind combo
+5. export as excel
